@@ -1,3 +1,0 @@
-index.html为宿舍主页
-index为个人主页
-others为所有个人文件的存放位置
