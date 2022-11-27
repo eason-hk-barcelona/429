@@ -1,0 +1,99 @@
+body {
+  margin: 0 auto;
+  background: #000;
+  overflow: hidden;
+}
+
+.particle_star {
+  width:4px;
+  height:4px;
+  position:absolute;
+  background-color: #ffffff;
+  box-shadow:0px 0px 17px 4px wheat;
+  border-radius: 50%;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-size: 100% auto; 
+  background-repeat: no-repeat; 
+  background-image: url('../img/bg.jpg');
+
+}
+.uav {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  width: 1000px;
+  height: 70px;
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  background-image: linear-gradient(to right, #f40b0b, #0b0b0a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+ul {
+  /* 去除小圆点 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+ 
+}
+.local-nav {
+  width: 100%;
+  position: absolute;
+  top: 660px;
+  left: 0%;
+  display: flex;
+  height: 50px;
+  z-index:101;
+ 
+ 
+}
+.local-nav li {
+  flex: 1;
+ 
+}
+.local-nav a {
+  display: flex;
+  flex-direction: column;
+  /* 侧轴居中对齐 */
+  align-items: center;
+  font-size: 35px;
+  
+}
+.music {
+ 
+  z-index: 101;
+  position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.word1 {
+background-image: linear-gradient(to right, #e7ece8, #dcdad6);
+-webkit-background-clip: text;
+color: transparent;
+}
+.word2 {
+background-image: linear-gradient(to right, #FF506C, #F20079);
+-webkit-background-clip: text;
+color: transparent;
+}
+.word3 {
+background-image: linear-gradient(to right, #dab524, #c5ef0a);
+-webkit-background-clip: text;
+color: transparent;
+}
+.word4 {
+background-image: linear-gradient(to right, #4b1cda, #d70ed7);
+-webkit-background-clip: text;
+color: transparent;
+}
+
