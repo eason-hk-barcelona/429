@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+span {
+	font-size: 40px;
+}
+.boxes{
+	display: flex;
+	position: absolute;
+	top: 500px;
+	width: 100%;
+	left: 0%;
+}
+.boxes li {
+	flex: 1;
+	}
+.boxes a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+ul {
+    /* 去除小圆点 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(127, 127, 127);
+}

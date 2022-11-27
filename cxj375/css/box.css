@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+.big_box {
+    display: flex;
+    position:absolute;
+    top: 15%;
+    width: 100%;
+    left: 0%;
+}
+.left_box {
+    flex: 1;
+    width: 40%;
+    height: auto;
+    left: 0%;
+}
+.left_box img {
+    width: 400px;
+    height: 250px;
+    position: relative;
+    top: 25%;
+    left: 17%;
+}
+.right_box {
+    flex: 1;
+    width: 60%;
+    height: auto;
+    right: 0%;
+}
