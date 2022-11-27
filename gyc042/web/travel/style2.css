@@ -1,0 +1,51 @@
+.layout {
+    width: 100%;
+    /* 最大宽度 */
+    max-width: 1200px;
+    /* 最小宽度 */
+    min-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    font-family: Microsoft Yahei;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+ul {
+    /* 去除小圆点 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.local-nav {
+    display: flex;
+    flex-direction: column;
+    height: 1024px;
+    background-color: #fff;
+}
+.local-nav li {
+    flex: 1;
+}
+.around {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.local-nav-icon img {
+   width: 750px; 
+   height: 512px; 
+}   
+.small {
+    font-size: 23px;
+    font-weight: 700;
+   padding-top: 15%;
+   background-image: linear-gradient(to right, #93ff50, #24f200);
+   -webkit-background-clip: text;
+   color: transparent;
+}
+.word {
+    padding-top: 15%;
+    padding-right: 20%;
+    background-image: linear-gradient(to right, #FF506C, #F20079);
+    -webkit-background-clip: text;
+    color: transparent;
+}

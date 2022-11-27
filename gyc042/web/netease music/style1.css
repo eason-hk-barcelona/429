@@ -1,0 +1,454 @@
+.layout {
+    width: 100%;
+    /* 最大宽度 */
+    max-width: 640px;
+    /* 最小宽度 */
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #fff;
+    font-family: Microsoft Yahei;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+main {
+    padding-bottom: 83.5px;
+}
+footer {
+    z-index: 640;
+    height: 83.5px;
+    width: 640px;
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+    
+}
+
+ul {
+    /* 去除小圆点 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+a {
+    text-decoration: none;
+    color: rgb(127, 127, 127);
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    /* 堆叠顺序，越大越在上面 */
+    z-index: 640;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    height: 44px;
+    max-width: 640px;
+    min-width: 320px;
+    background-color: #F8EEEC;
+    
+}
+.user {
+    width: 44px;
+    height: 44px;
+}    
+.tingeshiqu {
+    width: 44px;
+    height: 44px; 
+    margin-top:0%
+    
+    
+}
+
+.searchbox {
+    flex: 1;
+    height: 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    padding-left: 30px;
+   
+}
+/* 伪元素插入图片 没成功*/
+/* .searchbox::before {
+    content: "";
+    display: block;
+    background: "C:\Users\Eason\Desktop\binyan internship\images\app17.png"
+}
+.search-icon {
+    width: 22px;
+    height: 22px;
+} */
+
+
+
+/* 焦点动图 纯css法一*/
+/* .focus {
+    width: 640px;
+    height: 248.45px;
+    margin: 0 auto;
+    padding-top: 40px;
+    overflow: hidden;
+}
+.boxes {
+    list-style: none;
+    width: 9999px;
+    height: 248.45px;
+    
+}
+.box {
+    float: left;
+    width: 640px;
+    height: 248.45px;
+    animation: move 12s steps(3,end) infinite ;
+}
+.box img {
+    
+    width: 100%;
+    height: 100%;
+    
+}
+.boxes:hover {
+    animation-play-state: paused;
+}
+
+@keyframes move { 
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-1920px);
+    }
+} */
+
+/* 焦点动图纯css法二（力求丝滑效果） */
+  .focus {
+    width: 640px;
+    height: 248.45px;
+    overflow: hidden;
+    padding-top: 40px;
+  }
+  .boxes {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: move 15s steps(3,end) infinite;
+  }
+  .box {
+    width: 640px;
+    height: 248.45px;
+    flex-shrink: 0;
+    animation: limove 5s infinite;
+  }
+  .box img {
+    width: 100%;
+    height: 100%;
+ }
+
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-1920px, 0);
+    }
+  }
+  @keyframes limove {
+    0% {
+      transform: translate(0, 0);
+    }
+    80%,
+    100%  {
+      transform: translate(-640px, 0);
+    }
+  }
+
+/* 局部导航栏 */
+.local-nav {
+    display: flex;
+    height: 82px;
+    background-color: #fff;
+    margin-top: 6px;
+    
+}
+.local-nav li {
+    flex: 1;
+}
+.local-nav a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 */
+    align-items: center;
+    font-size: 16px;
+}
+.local-nav-icon img {
+   width: 55px; 
+   height: 55px; 
+   margin-top: 10px;
+}   
+/* 一条灰色的线 */
+.huisexian {
+    border-top: 1px solid rgb(231,231,231);
+    width: 640px;
+    margin-top: 20px;
+}
+/* 推荐歌单 */
+.recommend {
+    display: flex;
+    height: 41px;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+.tuijiangedan {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px;
+}
+.more {
+    position: relative;
+}
+
+#find-more{  
+    position: relative; 
+    top: 30%;
+    
+    width: 100px;
+    border: solid red;
+    border-radius: 17px;
+    color: black;
+    background-color: #fff;
+    padding: 4px 7px;
+    font-weight: 700;
+}
+/* 推荐歌单下的三张图片 */
+.local-pic {
+    display: flex;
+    height: 222px;
+    background-color: #fff;
+    margin-top: 6px;
+    
+}
+.local-pic li {
+    flex: 1;
+}
+.change {
+    width: 174px;
+    height: 217px;
+    overflow: hidden;
+}
+.change-ul {
+    display: flex;
+    flex-direction: column;
+    animation: sprite 15s steps(3,end) infinite;
+}
+.change-ul>li {
+    width: 100%;
+    height: 100%;
+    animation: spriteli 5s infinite;
+}
+
+
+@keyframes sprite {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, -666px);
+    }
+  }
+  @keyframes spriteli {
+    0% {
+      transform: translate(0, 0);
+    }
+    80%,
+    100%  {
+      transform: translate(0, -222px);
+    }
+  }
+  
+.local-pic a {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: center;
+    
+}
+.local-picture-icon-icon1  {
+    width: 174px; 
+    height: 174px; 
+    margin-top: 5px;
+    align-self: flex-start;
+    z-index: 174;
+   
+}
+.local-picture-icon-icon2  {
+    width: 174px; 
+    height: 174px; 
+    margin-top: 5px;
+    align-self: center;
+    
+}
+.local-picture-icon-icon3  {
+    width: 174px; 
+    height: 174px; 
+    margin-top: 5px;
+    align-self: flex-end;
+}
+.word-1 {
+    width: 174px;
+    font-weight: 400;
+}
+.word-2 {
+    width: 174px;
+    padding-left: 10%;
+    font-weight: 400;
+}
+.word-3 {
+    width: 174px;
+    padding-left: 20%;
+    font-weight: 400;
+}
+/* 推送栏 */
+.push-box {
+    margin-top: 18px;
+    border-top: 20px solid  rgb(245,245,245);
+    background-color: #fff;
+    
+}
+
+.push-hd {
+    position: relative;
+    height: 54px;
+    border-bottom: 2px solid  rgb(62,173,206);
+    border-radius: 10px;
+}
+
+.play {
+    font-weight: 700;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+    border-radius: 15px;
+    padding: 4px 10px;
+}
+.local-rcm {
+    display: flex;
+    height: 163.5px;
+    background-color: #fff;
+    margin-top: 5px;
+    flex-direction: column;
+    border-bottom: 2px solid rgb(244,244,244) ;
+}
+.local-rcm li {
+    flex: 1;
+}
+.local-rcm a {
+    display: flex;
+    
+}
+.local-rcm-icon img{
+    width: 70px;
+    height: 70px;
+    
+}
+p {
+    font-weight: 400;
+    font-size: 1.1em;
+    color:rgb(89,89,89);
+}
+.comment-1 {
+    width: 550px;
+    margin-left: 10px;
+    border-bottom: 2px solid rgb(243,243,243) ;
+}
+.comment-2 {
+    width: 550px;
+    margin-left: 10px;
+}
+.word {
+    width: 52px;
+    border-radius: 13px;
+    background-color:rgb(255,241,232);
+    color: rgb(251,132,78);
+    font-size: 11px;
+    padding: 4px;
+    margin: 2px;
+}
+/* 播放栏 */
+.playfield {
+    position: relative;
+    height: 50px;
+}
+.song {
+   font-size: 1.1em;
+   color: rgb(89,89,89);
+}
+.song img {
+    position: absolute;
+    bottom: 0.01px;
+    width: 60px;
+    height: 60px;
+}
+.details {
+    position: absolute;
+    left: 65px;
+    top: 10px;
+}
+.size {
+    font-size: 13px;
+}
+.playbutton img {
+    position: absolute;
+    right: 84px;
+    height: 50px;
+    width: 50px;
+}
+.menu img {
+    position: absolute;
+    right: 14px;
+    height: 50px;
+    width: 50px;
+    z-index: 50;
+    bottom: 0; 
+
+}
+
+.local-option {
+    display: flex;
+    height: 65px;
+    background-color: #fff;
+    margin-top: 6px;
+    /* position: fixed;
+    /* 堆叠顺序，越大越在上面 */
+    /* z-index: 640;
+    bottom: 0;  */
+    
+}
+.local-option li {
+    flex: 1;
+}
+.local-option a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 */
+    align-items: center;
+    font-size: 16px;
+}
+.local-option-icon img {
+   width: 45px; 
+   height: 45px; 
+   margin-top: 10px;
+} 
+.red {
+    background-image: linear-gradient(to right, #FF506C, #F20079);
+    -webkit-background-clip: text;
+    color: transparent;
+}  
+
+
+
+
+
